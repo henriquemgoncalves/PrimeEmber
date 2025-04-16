@@ -1,0 +1,83 @@
+.carnesContainer
+    width: 100%
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+    gap: 2rem
+    padding: 0 0 2rem 0
+
+    .bannerCarneImg
+        width: 100%
+        height: 50vh
+        object-fit: cover
+
+        .backImg
+            width: 100%
+            height: 100%
+
+    .carnesTitle
+        font-size: 2rem
+        color: #ffffff
+        font-weight: 300
+
+        span 
+            color: #fbff00
+            font-weight: 500
+    
+    p 
+        font-size: 1.3rem
+        color: #ffffff
+        font-weight: 200
+        text-align: center
+        width: 80%
+
+    .items
+        width: 100%
+        display: flex
+        flex-wrap: wrap
+        align-items: center
+        justify-content: center
+        gap: 2rem
+        background-color: #000000
+        padding: 2rem
+
+        .item
+            width: 270px
+            height: 430px
+            overflow: hidden
+            background-color: #6a0000
+            display: flex
+            flex-direction: column
+            align-items: center
+            justify-content: center
+            border-radius: 10px
+            gap: .3rem
+
+            img
+                width: 100%
+                height: 100%
+                object-fit: cover
+                object-position: center
+
+            h4
+                font-size: 1rem
+                color: #ffffff
+                font-weight: 200
+                text-align: center
+                width: 100%
+                padding: 5px
+                margin-bottom: 5px
+
+    @media (max-width: 580px)
+        .bannerCarneImg
+            height: 40vh
+
+            h1
+                font-size: 1.5rem
+
+            p
+                width: 100%
+                padding: 0 .8rem
+                font-size: 1rem
+                font-weight: 200
