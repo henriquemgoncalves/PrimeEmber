@@ -2,7 +2,7 @@
     width: 100%
     height: 100%
     background-color:#000000
-    padding: 1rem
+    // margin: 1px 0
 
     .kidsContainer
         flex: 2 1
@@ -10,8 +10,8 @@
         display: flex
         justify-content: center
         align-items: center
-        padding: 1rem
-        gap: 1rem
+        // padding: .5rem
+        // gap: .8rem
 
         .kidsImage
             flex: 1
@@ -24,27 +24,28 @@
             display: flex
             flex-direction: column
             justify-content: center
-            gap: 2rem
+            text-align: center
+            gap: 1rem
 
             h1 
-                font-size: 1.8rem
+                font-size: 1.5rem
                 font-weight: 500
                 color: #fbff00
 
             p 
-                font-size: 1.1rem
+                font-size: 1rem
                 font-weight: 300
                 color: #ffffff
 
         
 
     @media (max-width: 890px)
-        padding: 1rem
+        padding: 0
 
         .kidsContainer
             flex-direction: column-reverse
-            padding: 3rem 1rem
-            gap: 2rem
+            padding: 1rem
+            gap: 1rem
 
             .kidstImage
                 flex: 1

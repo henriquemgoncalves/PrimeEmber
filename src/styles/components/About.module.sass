@@ -1,32 +1,32 @@
 .about
     width: 100%
-    height: 100%
+    height: auto
     background-color:#000000
-    padding: 1rem
 
     .aboutContainer
-        flex: 2 1
+        width: 100%
         background: linear-gradient(180deg, #6a0000 0%, #c70000 50%, #6a0000 100%)
         display: flex
         justify-content: center
         align-items: center
-        padding: 1rem
-        gap: 1rem
+        // padding: .5rem
+        // gap:  .8rem
 
         .aboutText
             flex: 1
             display: flex
             flex-direction: column
             justify-content: center
-            gap: 2rem
+            text-align: center
+            gap: 1rem
 
             h1 
-                font-size: 1.8rem
+                font-size: 1.5rem
                 font-weight: 500
                 color: #fbff00
 
             p 
-                font-size: 1.1rem
+                font-size: 1rem
                 font-weight: 300
                 color: #ffffff
 
@@ -37,12 +37,13 @@
                 width: 100%
 
     @media (max-width: 890px)
-        padding: 1rem
+        padding: 0
+        border-bottom: 1px solid #000
 
         .aboutContainer
             flex-direction: column
-            padding: 3rem 1rem
-            gap: 2rem
+            padding: 1rem
+            gap: 1rem
 
             .aboutText
                 flex: 1
