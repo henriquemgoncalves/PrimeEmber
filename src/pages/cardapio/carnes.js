@@ -4,7 +4,7 @@ const carnes = [
     {
         id: 1,
         name: "Picanha",
-        img: "/images/cardapio/carnes/picanha.jpg",
+        img: "/images/cardapio/carnes/Picanha.jpg",
     },
     {
         id:2,
