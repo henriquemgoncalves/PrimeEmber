@@ -27,7 +27,7 @@ O projeto inclui:
 - 🏠 **Página Principal** — Apresentação da marca, slogan e destaque visual
 - 🥩 **Cardápio** — Cortes nobres e pratos especiais
 - 🍷 **Ambiente** — Galeria com imagens do espaço da churrascaria
-- 📞 **Contato** — Informações de reserva e formulário (em breve)
+- 📞 **Contato** — Informações de reserva e formulário
 
 ---
 
