@@ -1,40 +1,40 @@
+@use '@/styles/Mixins' as mixin
+@use '@/styles/Variables' as var
+    
 .ambienteArea
-    width: 100%
-    display: flex
-    flex-direction: column
-    align-items: center
+    @include mixin.tamanho(100%, auto)
+    @include mixin.centralizar
     justify-content: center
-    background-color: #000000
-    padding: 2rem 0
-    gap: 1rem
+    background-color: var.$color2
+    padding: var.$h4 0
+    gap: var.$h1
 
     h1
-        font-size: 2rem
+        font-size: var.$h4
         color: #ffffff
-        font-weight: 300
+        font-weight: var.$w3
 
         span 
-            color: #fbff00
-            font-weight: 500
+            color: var.$color4
+            font-weight: var.$w5
 
     p 
         font-size: 1.3rem
-        color: #ffffff
-        font-weight: 200
+        color: var.$color1
+        font-weight: var.$w2
         text-align: center
-        width: 80%
+        @include mixin.tamanho(80%, auto)
 
     .ambienteAreaImg
-        width: 100%
+        @include mixin.tamanho(100%, auto)
         display: flex
         justify-content: center
         align-items: center
-        gap: 1rem
+        gap: var.$h1
 
         img 
-            width: 100%
+            @include mixin.tamanho(100%, 400px)
             max-width: 500px
-            height: 400px
 
     @media (max-width: 1030px)
         .ambienteAreaImg
@@ -42,23 +42,21 @@
             align-items: center
 
             img 
-                width: 100%
-                height: 300px
+                @include mixin.tamanho(100%, 300px)
 
     @media (max-width: 530px)
         h1
-            font-size: 1.5rem
+            font-size: var.$h3
 
         p
-            width: 100%
+            @include mixin.tamanho(100%, auto)
             padding: 0 .8rem
-            font-size: 1rem
-            font-weight: 200 
+            font-size: var.$h1
+            font-weight: var.$w2 
 
         .ambienteAreaImg
             gap: .1rem
 
             img 
-                width: 100%
-                height: auto
+                @include mixin.tamanho(100%, auto)
                 padding: 10px

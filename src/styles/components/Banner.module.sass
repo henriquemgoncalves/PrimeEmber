@@ -1,17 +1,17 @@
+@use '@/styles/Mixins' as mixin
+@use '@/styles/Variables' as var
+    
 .banner
-    width: 100%
-    height: 83vh
+    @include mixin.tamanho(100%, 83vh)
     position: relative
 
     .bannerVideo
-        width: 100%
-        height: 100%
+        @include mixin.tamanho(100%, 100%)
         object-fit: cover
         object-position: center
 
     .overlay
-        width: 100%
-        height: 100%
+        @include mixin.tamanho(100%, 100%)
         position: absolute
         top: 0
         left: 0
@@ -19,60 +19,59 @@
         z-index: 1
 
     .bannerContent
-        width: 100%
-        height: 100%
+        @include mixin.tamanho(100%, 100%)
         position: absolute
         top: 70%
         left: 50%
         transform: translate(-50%, -50%)
         z-index: 2
-        color: white
+        color: var.$color1
         display: flex
         flex-direction: column
         justify-content: center
-        padding: 0 2rem
+        padding: 0 var.$h4
 
         .logo
             display: none
 
         h1
-            font-size: 3rem
-            margin-bottom: 1rem
+            font-size: var.$h6
+            margin-bottom: var.$h1
             text-align: end
-            color: #fbff00
+            color: var.$color4
 
         p
-            font-size: 1.5rem
+            font-size: var.$h3
             text-align: end
 
     @media (max-width: 768px)
         .bannerContent
             top: 60%
-            padding: 0 1rem
+            padding: 0 var.$h1
 
             h1
-                font-size: 2rem
+                font-size: var.$h4
 
             p
-                font-size: 1rem
+                font-size: var.$h1
 
     @media (max-width: 580px)
         .bannerContent
             top: 55%
             
             .logo
-                width: 100%
-                padding: 1rem 0      
+                @include mixin.tamanho(100px, auto)
+                padding: var.$h1 0      
                 display: flex
                 justify-content: center
 
             img
-                width: 300px
+                @include mixin.tamanho(300px, auto)
 
             h1
                 text-align: center
-                margin-top: 1rem
-                font-weight: 500
+                margin-top: var.$h1
+                font-weight: var.$w5
 
             p
                 font-size: 1.1rem

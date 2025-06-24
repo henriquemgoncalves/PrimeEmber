@@ -1,42 +1,43 @@
+@use '@/styles/Mixins' as mixin
+@use '@/styles/Variables' as var
+    
 .headerContainer
     position: sticky
     top: 0
     left: 0
-    width: 100%
-    height: 80px
+    @include mixin.tamanho(100%, 80px)
     background-color: #000000c4
     z-index: 5
 
     .logo
-        width: 200px
+        @include mixin.tamanho(200px, auto)
 
         img
             padding: .5rem
-            width: 100%
+            @include mixin.tamanho(100%, auto)
 
     nav
-        width: 100%
-        height: 100%
+        @include mixin.tamanho(100%, 100%)
         display: flex
         justify-content: space-between
         align-items: center
-        padding: 0 2rem
+        padding: 0 var.$h4
 
         .navLinks
             display: flex
             align-items: center
-            gap: 2rem
+            gap: var.$h4
             list-style: none
 
             .link
                 text-decoration: none
-                color: #fff
-                font-size: 1rem
-                font-weight: 400
+                color: var.$color1
+                font-size: var.$h1
+                font-weight: var.$w4
                 transition: color 0.3s ease
 
                 &:hover
-                    color: #FFA600
+                    color: var.$color4
 
 @media (max-width: 580px)
     .headerContainer
@@ -51,7 +52,7 @@
                 display: none
 
             .navLinks
-                width: 100%
+                @include mixin.tamanho(100%, auto)
                 display: flex
                 justify-content: space-evenly
                 align-items: center

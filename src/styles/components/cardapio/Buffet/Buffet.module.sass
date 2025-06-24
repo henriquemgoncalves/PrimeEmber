@@ -1,71 +1,68 @@
+@use '@/styles/Mixins' as mixin
+@use '@/styles/Variables' as var
+    
 .buffetContainer
-    width: 100%
-    display: flex
-    flex-direction: column
-    align-items: center
+    @include mixin.tamanho(100%, auto)
+    @include mixin.centralizar
     justify-content: center
-    gap: 1rem
+    gap: var.$h1
     background: linear-gradient(180deg, #ffffff00 10%, rgba(0,0,0,1) 100%)
 
     .buffetTitle
-        font-size: 2rem
-        color: #ffffff
-        font-weight: 300
-        margin-top: 3rem
+        font-size: var.$h4
+        color: var.$color1
+        font-weight: var.$w3
+        margin-top: var.$h6
 
         span 
-            color: #fbff00
-            font-weight: 500
+            color: var.$color4
+            font-weight: var.$w5
     
     p 
-        font-size: 1.3rem
-        color: #ffffff
-        font-weight: 200
+        font-size: var.$h2
+        color: var.$color1
+        font-weight: var.$w2
         text-align: center
-        width: 80%
+        @include mixin.tamanho(80%, auto)
 
     .items
-        width: 100%
+        @include mixin.tamanho(100%, auto)
         display: flex
         flex-wrap: wrap
         align-items: center
         justify-content: center
-        gap: 1rem
-        background-color: #000000
+        gap: var.$h1
+        background-color: var.$color2
         padding: .5rem
 
         .item
-            width: 370px
-            height: 430px
+            @include mixin.tamanho(370px, 430px)
             overflow: hidden
-            background-color: #6a0000
-            display: flex
-            flex-direction: column
-            align-items: center
+            background-color: var.$color3
+            @include mixin.centralizar
             justify-content: center
             border-radius: 10px
             gap: .3rem
 
             img
-                width: 100%
-                height: 100%
+                @include mixin.tamanho(100%, 100%)
                 object-fit: cover
                 object-position: center
 
             h2
-                font-size: 1.3rem
-                color: #ffffff
-                font-weight: 400
+                font-size: var.$h3
+                color: var.$color1
+                font-weight: var.$w4
                 text-align: center
-                width: 100%
-                padding: 1rem 0
+                @include mixin.tamanho(100%, auto)
+                padding: var.$h1 0
 
     @media (max-width: 580px)
             h1
-                font-size: 1.5rem
+                font-size: var.$h3
 
             p
-                width: 100%
+                @include mixin.tamanho(100%, auto)
                 padding: 0 .8rem
-                font-size: 1rem
-                font-weight: 200
+                font-size: var.$h1
+                font-weight: var.$w2

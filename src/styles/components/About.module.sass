@@ -1,16 +1,16 @@
+@use '@/styles/Mixins' as mixin
+@use '@/styles/Variables' as var
+    
 .about
-    width: 100%
-    height: auto
-    background-color:#000000
+    @include mixin.tamanho(100%, auto)
+    background-color: var.$color2
 
     .aboutContainer
-        width: 100%
+        @include mixin.tamanho(100%, auto)
         background: linear-gradient(180deg, #6a0000 0%, #c70000 50%, #6a0000 100%)
         display: flex
         justify-content: center
         align-items: center
-        // padding: .5rem
-        // gap:  .8rem
 
         .aboutText
             flex: 1
@@ -18,23 +18,23 @@
             flex-direction: column
             justify-content: center
             text-align: center
-            gap: 1rem
+            gap: var.$h1
 
             h1 
-                font-size: 1.5rem
-                font-weight: 500
-                color: #fbff00
+                font-size: var.$h3
+                font-weight: var.$w5
+                color: var.$color4
 
             p 
-                font-size: 1rem
-                font-weight: 300
-                color: #ffffff
+                font-size: var.$h1
+                font-weight: var.$w3
+                color: var.$color1
 
         .aboutImage
             flex: 1
 
             img
-                width: 100%
+                @include mixin.tamanho(100%, auto)
 
     @media (max-width: 890px)
         padding: 0
@@ -42,8 +42,8 @@
 
         .aboutContainer
             flex-direction: column
-            padding: 1rem
-            gap: 1rem
+            padding: var.$h1
+            gap: var.$h1
 
             .aboutText
                 flex: 1
@@ -53,4 +53,4 @@
                 flex: 1
 
                 img
-                    width: 100%
+                    @include mixin.tamanho(100%, auto)

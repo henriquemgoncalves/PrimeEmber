@@ -1,19 +1,16 @@
+@use '@/styles/Mixins' as mixin
+    
 .bannerCardapio
-    width: 100%
-    height: auto
-    display: flex
-    flex-direction: column
-    align-items: center
+    @include mixin.tamanho(100%, auto)
+    @include mixin.centralizar
 
     .bannerCardapioImg
-        width: 100%
-        height: 100%
+        @include mixin.tamanho(100%, 100%)
         object-fit: cover
         object-position: center
 
         img
-            width: 100%
-            height: 100%
+            @include mixin.tamanho(100%, 100%)
 
     @media (max-width: 590px)
         height: auto

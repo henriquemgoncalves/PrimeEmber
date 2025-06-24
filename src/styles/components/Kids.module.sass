@@ -1,8 +1,9 @@
+@use '@/styles/Mixins' as mixin
+@use '@/styles/Variables' as var
+    
 .kids
-    width: 100%
-    height: 100%
-    background-color:#000000
-    // margin: 1px 0
+    @include mixin.tamanho(100%, 100%)
+    background-color: var.$color2
 
     .kidsContainer
         flex: 2 1
@@ -10,14 +11,12 @@
         display: flex
         justify-content: center
         align-items: center
-        // padding: .5rem
-        // gap: .8rem
 
         .kidsImage
             flex: 1
 
             img
-                width: 100%
+                @include mixin.tamanho(100%, auto)
 
         .kidsText
             flex: 1
@@ -25,33 +24,31 @@
             flex-direction: column
             justify-content: center
             text-align: center
-            gap: 1rem
+            gap: var.$h1
 
             h1 
-                font-size: 1.5rem
-                font-weight: 500
-                color: #fbff00
+                font-size: var.$h3
+                font-weight: var.$w5
+                color: var.$color4
 
             p 
-                font-size: 1rem
-                font-weight: 300
-                color: #ffffff
-
-        
+                font-size: var.$h1
+                font-weight: var.$w3
+                color: var.$color1
 
     @media (max-width: 890px)
         padding: 0
 
         .kidsContainer
             flex-direction: column-reverse
-            padding: 1rem
-            gap: 1rem
+            padding: var.$h1
+            gap: var.$h1
 
             .kidstImage
                 flex: 1
 
                 img
-                    width: 100%
+                    @include mixin.tamanho(100%, auto)
 
             .kidsText
                 flex: 1

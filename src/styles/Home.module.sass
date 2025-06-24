@@ -1,5 +1,6 @@
+@use 'Mixins' as mixin
+  
 .container
-  width: 100%
-  height: auto
+  @include mixin.tamanho(100%, auto)
   display: flex
   flex-direction: column
