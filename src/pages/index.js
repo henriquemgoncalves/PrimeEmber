@@ -5,6 +5,7 @@ import Featured from "@/ui/components/Featured";
 import About from "@/ui/components/About";
 import Form from "@/ui/components/Form";
 import Kids from "@/ui/components/Kids";
+import Local from "@/ui/components/Local";
 
 export default function Home() {
   return (
@@ -18,6 +19,7 @@ export default function Home() {
         <About/>
         <Kids/>
         <Form/>
+        <Local/>
       </main>
     </>
   );
